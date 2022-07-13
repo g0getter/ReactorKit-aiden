@@ -1,12 +1,13 @@
 workspace 'Examples.xcworkspace'
-platform :ios, '9.0'
+platform :ios, '13.0'
 use_frameworks!
 inhibit_all_warnings!
 
 abstract_target 'Example' do
-  pod 'ReactorKit', :path => '../'
-  pod 'RxSwift', '~> 6.0'
-  pod 'RxCocoa', '~> 6.0'
+  pod 'ReactorKit'
+  pod 'RxSwift', '~> 5.0'
+  pod 'RxCocoa', '~> 5.0'
+  pod 'Moya/RxSwift', '~> 14.0'
 
   target 'Counter' do
     project 'Counter/Counter.xcodeproj'
